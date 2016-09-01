@@ -1,0 +1,25 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: #F2F3F3;
+  background-color: #2A2B2B;
+}
+a {
+  color: #e86e34;
+  text-decoration: none;
+}
+a:hover {
+  color: #ee8f63
+}
+
+.zootrope {
+  margin: auto;
+  width: 190px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.sprite {
+  position: relative;
+  left: 0;
+}
