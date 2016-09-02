@@ -54,7 +54,11 @@ window.zootrope = {
     console.log('Voici les bandelettes disponibles : ' + Object.keys(this.sprites).join(', ') + '.');
   },
 
-  play: function(sprite) {
+  play: function() {
+    if (this.status == "playing") {
+      console.log('Le zootrope est déjà lancé');
+      return
+    }
     console.log('Démarre le zootrope');
     this.status = "playing"
     this.clock = setInterval( () => {
