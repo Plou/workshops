@@ -9,7 +9,7 @@ Côté technique, un éditeur de texte type [atom](https://atom.io/) ou [Sublime
 Le but de cet atelier et se familiariser avec la programmation. La première partie servira de support à la découverte de la syntaxe du langage et de l'utilisation de méthodes.
 
 ## Mise en place 
-La première étape et la création de notre environnement.  
+La première étape est la création de notre environnement.  
 Nous découvrirons comment créer un fichier html dans lequel nous importerons les fichiers nécessaires au fonctionnement du zootrope, nous pourrons alors interagir avec. 
 
 Nous utiliserons les fichiers fournis pour débuter :
@@ -23,7 +23,7 @@ Nous utiliserons les fichiers fournis pour débuter :
 ### HTML
 Le HTML est le langage du web. C'est seul fichier nécéssaire à la création d'un page web, il accueille le contenu.
 
-Il est constitué de balises (*tags*) qui permettrons de donner du sens à nos contenus (la sémantique). Elles sont délimités par les signes `<` et `>`, entre ces caractères nous trouverons le nom de cette balise. Une balise contient souvent un texte qui sera affiché, dans ce cas nous auront une balise ouvrante `<balise>` et une balise fermante `</balise>`.
+Il est constitué de balises (*tags*) qui permettrons de donner du sens à nos contenus (la sémantique). Elles sont délimités par les signes `<` et `>`, entre ces caractères nous trouverons le nom de cette balise. Une balise contient souvent un texte qui sera affiché, dans ce cas nous aurons une balise ouvrante `<balise>` et une balise fermante `</balise>`.
 
 Voici quelques exemples :
 - `<head> </head>`, La tête de notre page, son contenu ne s'affiche pas, c'est dans cette balise que nous ajouterons des informations à destination du navigateur. Nous y renseignerons l'emplacement de nos scripts.
@@ -40,9 +40,9 @@ Regardons la structure d'un lien, une des briques élémentaires de ce qui const
 
 Son contenu (entre les balises ouvrante et fermante) sera le texte du lien, le nom de la balise `a` indique au navigateur que c'est un lien (*anchor*) et l'attribut `href` (*Hypertext Reference* ou lien hypertexte) indiquera au navigateur la cible du lien.
 
-Les deux attributs qui nous intéresseront le plus seront `id` (identifiant) et `class`. Ils nous permettrons d'identifier les éléments avec lesquels nous voudront interagir. Ils servent à nommer un bloc de contenu.
+Les deux attributs qui nous intéresseront le plus seront `id` (identifiant) et `class`. Ils nous permettrons d'identifier les éléments avec lesquels nous voudrons interagir. Ils servent à nommer un bloc de contenu.
 
-Le html est un language de balisage, il et fait pour structurer les données. Ce n'est pas un langage de programmation, il ne fait que décrire des informations. Les navigateur ont un affichage par default de ces balises, un titre de premier niveau (`<h1>`) sera plus grand et sa graisse sera plus importante. Ce rendu est cependant un peu brut, pour rendre le contenu plus attrayant deux autres outils vont venir se greffé au HTML, le CSS (feuilles de styles) va controller l'aspect graphique et la mise en page tandis que le JavaScript nous permettra de dynamiser tout ça.     
+Le html est un language de balisage, il est fait pour structurer les données. Ce n'est pas un langage de programmation, il ne fait que décrire des informations. Les navigateurs ont un affichage par défaut de ces balises, un titre de premier niveau (`<h1>`) sera plus grand et sa graisse sera plus importante. Ce rendu est cependant un peu brut, pour rendre le contenu plus attrayant deux autres outils vont venir se greffer au HTML, le CSS (feuilles de styles) va controller l'aspect graphique et la mise en page tandis que le JavaScript nous permettra de dynamiser tout ça.     
 
 
 #### Don't panic!
@@ -51,16 +51,16 @@ L'essentiel de la page html que nous utiliserons est déjà écrite. Le JavaScri
 
 
 ### Le JavaScript ou js pour les intimes
-Le js est un language de programmation, il va nous permettre de créer des interactions avec notre contenus.
+Le js est un language de programmation, il va nous permettre de créer des interactions avec notre contenu.
 
-C'est la dernière étape de notre mise en place, nous allons indiquer à notre navigateur ou aller chercher notre script. Il contiendra toutes nos instruction pour faire fonctionner notre zootrope.
+C'est la dernière étape de notre mise en place, nous allons indiquer à notre navigateur ou aller chercher notre script. Il contiendra toutes nos instructions pour faire fonctionner notre zootrope.
 
 Dupliquons la balise qui inclue le fichier `zootrope.js` pour ajouter notre fichier `main.js`.  
-Ouvrons donc ce fichier, il (presque) vide. Il ne se passe donc rien 😉. Pour tester ce fichier nous allons utiliser une fonction que le navigateur nous fourni : `alert();`. Nous pouvons passer une chaîne de caractère (*string*) en paramètre.
+Ouvrons donc ce fichier, il est (presque) vide. Il ne se passe donc rien 😉. Pour tester ce fichier nous allons utiliser une fonction que le navigateur nous fournit : `alert();`. Nous pouvons passer une chaîne de caractère (*string*) en paramètre.
 
-Maintenant que sommes sur que notre fichier est bien interprété par le navigateur nous allons commencer à programmer !
+Maintenant que sommes sûr que notre fichier est bien interprété par le navigateur nous allons commencer à programmer !
 
-Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `console.log();` et découvrons le meilleur ami du développeur : l'Inspecteur. La navigation dans le HTML et notre tableau de bord, la console.
+Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `console.log();` et découvrons le meilleur ami du développeur : l'Inspecteur. 
 
 ## Utiliser un programme
 
@@ -71,10 +71,10 @@ Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `consol
 
 ### Mettons les mains dans le cambouis 
 Avant de créer notre propre zootrope, nous allons nous familiariser avec le language. Un zootrope est déjà présent et dispose d'une interface de programmation applicative ou API.
-C'est une collection de méthode qui va nous permettre de le contrôler. Pensez à la télécommande d'un robots avec une liste de taches qu'il pourrait accomplir :
+C'est une collection de méthodes qui va nous permettre de le contrôler. Pensez à la télécommande d'un robot avec une liste de taches qu'il pourrait accomplir :
 - Allumer les bougies 
 - Commander un repas
-- Faire le menage
+- Faire le ménage
 Ce que vous faite c'est appuyer sur un bouton et attendre le résultat, vous n'avez pas besoin de savoir vous même comment accomplir ces choses.
 
 Nous allons donc commencer à utiliser l'API que nous propose le zootrope. L'étape suivante sera de passer de l'autre côté du miroir et de fabriquer cette API. Profitons de cette interface toute prête pour découvrir comment interagir avec notre page.
@@ -86,7 +86,7 @@ Nous allons donc commencer à utiliser l'API que nous propose le zootrope. L'ét
 - Découvrir les objects et les méthodes
 - Surcharger un objets
 - Comprendre les éléments de l'algorithmique
-- Fabriquer un zootrope pardis !
+- Fabriquer un zootrope pardi !
 
 ### Conception
 Que doit pouvoir faire notre zootrope ?  
