@@ -18,7 +18,7 @@ Nous utiliserons les fichiers fournis pour débuter :
 - `js/zootrope.js`, le zootrope utilisé dans la première partie.
 - `js/main.js`, fichier dans lequel nous travaillerons
 - `js/zootrope-custom.js` Le fichier dans lequel nous fabriquerons  notre zootrope.
-- `reademe.md` qui contient ces instructions
+- `readme.md` qui contient ces instructions
 
 ### HTML
 Le HTML est le langage du web. C'est seul fichier nécéssaire à la création d'un page web, il accueille le contenu.
