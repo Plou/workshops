@@ -1,1 +1,1 @@
-// Hello, C'est ici que vous controllerez votre zootrope
+// Hello, c'est ici que vous contrôlerez votre zootrope
