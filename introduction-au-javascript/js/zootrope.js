@@ -105,7 +105,7 @@ window.zootrope = {
   setSprite: function(sprite = this.currentSprite) {
     if (sprite != this.currentSprite) {
       this.currentSprite = sprite
-      console.log('Change la bandelette : ' + this.currentSprite);
+      console.log('Met en place la bandelette : ' + this.currentSprite);
       this.sprite = this.sprites[this.currentSprite]
       this.element.setAttribute('src', this.sprite.src)
       this.scene.style.width = this.sprite.frame.width + 'px'

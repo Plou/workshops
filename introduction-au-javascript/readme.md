@@ -8,9 +8,9 @@ Côté technique, un éditeur de texte type [atom](https://atom.io/) ou [Sublime
 ## Introduction à la programmation
 Le but de cet atelier et se familiariser avec la programmation. La première partie servira de support à la découverte de la syntaxe du langage et de l'utilisation de méthodes.
 
-## Mise en place 
+## Mise en place
 La première étape est la création de notre environnement.  
-Nous découvrirons comment créer un fichier html dans lequel nous importerons les fichiers nécessaires au fonctionnement du zootrope, nous pourrons alors interagir avec. 
+Nous découvrirons comment créer un fichier html dans lequel nous importerons les fichiers nécessaires au fonctionnement du zootrope avec lequel nous interagirons.
 
 Nous utiliserons les fichiers fournis pour débuter :
 - `index.html`, notre page qui sera visionnée avec le navigateur
@@ -21,7 +21,7 @@ Nous utiliserons les fichiers fournis pour débuter :
 - `readme.md` qui contient ces instructions
 
 ### HTML
-Le HTML est le langage du web. C'est seul fichier nécéssaire à la création d'un page web, il accueille le contenu.
+Le HTML est le langage du web. C'est seul fichier nécéssaire à la création d'une page web, il accueille le contenu.
 
 Il est constitué de balises (*tags*) qui permettrons de donner du sens à nos contenus (la sémantique). Elles sont délimités par les signes `<` et `>`, entre ces caractères nous trouverons le nom de cette balise. Une balise contient souvent un texte qui sera affiché, dans ce cas nous aurons une balise ouvrante `<balise>` et une balise fermante `</balise>`.
 
@@ -30,7 +30,7 @@ Voici quelques exemples :
 - `<body> </body>`, Le corps de la page qui accueillera le contenu, c'est la partie visible.
 - `<h1> </h1>` Les titres (*headings*), la hiérarchie de titre allant de 1 à 6.
 - `<p> </p>` les paragraphes
-- `<div> </div>` Une division, une balise neutre nous servant à interagir avec son contenu.
+- `<div> </div>` Une division, une balise neutre nous servant à interagir avec le contenu.
 
 À ces balises nous pouvons ajouter des attributs. Ces attributs pourrons contenir des indications pour le navigateur. Ils peuvent aussi nous permettre d'identifier un élément.
 
@@ -46,7 +46,7 @@ Le html est un language de balisage, il est fait pour structurer les données. C
 
 
 #### Don't panic!
-L'essentiel de la page html que nous utiliserons est déjà écrite. Le JavaScript étant le langage de programmation le plus répandu sur le web, il est important de comprendre comment fonctionne le html avant d'interagir avec. 
+L'essentiel de la page html que nous utiliserons est déjà écrite. Le JavaScript étant le langage de programmation le plus répandu sur le web, il est important de comprendre comment fonctionne le html avant d'interagir avec.
 
 
 
@@ -60,29 +60,29 @@ Ouvrons donc ce fichier, il est (presque) vide. Il ne se passe donc rien 😉. P
 
 Maintenant que sommes sûr que notre fichier est bien interprété par le navigateur nous allons commencer à programmer !
 
-Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `console.log();` et découvrons le meilleur ami du développeur : l'Inspecteur. 
+Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `console.log();` et découvrons le meilleur ami du développeur : l'Inspecteur.
 
 ## Utiliser un programme
 
 ### Objectifs
 - Comprendre et utliser une API
 - Sélectionner un élément HTML
-- écouter un événement (le click de souris)
+- Écouter un événement (le click de souris)
 
-### Mettons les mains dans le cambouis 
+### Mettons les mains dans le cambouis
 Avant de créer notre propre zootrope, nous allons nous familiariser avec le language. Un zootrope est déjà présent et dispose d'une interface de programmation applicative ou API.
 C'est une collection de méthodes qui va nous permettre de le contrôler. Pensez à la télécommande d'un robot avec une liste de taches qu'il pourrait accomplir :
-- Allumer les bougies 
+- Allumer les bougies
 - Commander un repas
 - Faire le ménage
-Ce que vous faite c'est appuyer sur un bouton et attendre le résultat, vous n'avez pas besoin de savoir vous même comment accomplir ces choses.
+Ce que vous faite c'est appuyer sur un bouton et attendre le résultat, vous n'avez pas besoin de savoir vous même comment accomplir ces choses. Cela permet de cacher derrière une commande simple une liste d'instructions plus complexes.
 
 Nous allons donc commencer à utiliser l'API que nous propose le zootrope. L'étape suivante sera de passer de l'autre côté du miroir et de fabriquer cette API. Profitons de cette interface toute prête pour découvrir comment interagir avec notre page.
 
 ## Fabriquons notre zootrope
 
 ### Objectifs
-- Passer par le papier pour concevoir le programme en amont 
+- Passer par le papier pour concevoir le programme en amont
 - Découvrir les objects et les méthodes
 - Surcharger un objets
 - Comprendre les éléments de l'algorithmique
