@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.inputForm {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.inputForm input {
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.messages {
+  margin: 0;
+  padding: 15px;
+  list-style: none;
+  background: #eceff1;
+}
+.message {
+  margin: 0 0 45px;
+  padding-top: 65px;
+  max-width: 90%;
+}
+
+
+.message-text {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #fff;
+  text-align: left;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.message-user {
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  margin-bottom: 0px;
+  max-width: 64px;
+  max-height: 64px;
+}
+
+.message[data-is-ours="true"] {
+  margin-left: auto;
+  text-align: right;
+}
+
+[data-is-ours="true"] .message-text {
+  background-color: #cfd8dc;
+}
+[data-is-ours="true"] .message-user {
+  left: auto;
+  right: 15px;
+}
+
+
+.connect {
+  display: block;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 300px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+.connect button,
+.connect input {
+  display: block;
+  margin-bottom: 20px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.connect button {
+  background: #e0821a;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
