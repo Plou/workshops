@@ -65,7 +65,7 @@ Pour commencer en douceur, remplaçons l'alerte un peu aggressive par un `consol
 ## Utiliser un programme
 
 ### Objectifs
-- Comprendre et utliser une API
+- Comprendre et utiliser une API
 - Sélectionner un élément HTML
 - Écouter un événement (le click de souris)
 
