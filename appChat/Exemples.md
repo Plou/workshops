@@ -33,16 +33,16 @@ La structure du chat
     <h1>AppChat</h1>
     <ul>
       <li>
-        <p>author</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et illum omnis.</p>
+        <p>Sebastien</p>
+        <p>Tu vois l’esturgeon et la raie se sont lancés dans le reggae.</p>
       </li>
       <li>
-        <p>author</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et illum omnis.</p>
+        <p>Evinrude</p>
+        <p>Bzz.Bzz.Bzz!</p>
       </li>
       <li>
-        <p>author</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et illum omnis.</p>
+        <p>Jiminy</p>
+        <p>Que penserais-tu d'une chansonnette ?</p>
       </li>
     </ul>
 ```
@@ -153,6 +153,7 @@ La structure du chat
   }
 ```
 
+## html
 
 ``` html
 <html>
@@ -168,16 +169,16 @@ La structure du chat
     <div class="chat container">
       <ul class="messages">
         <li class="message">
-          <p class="author">Auteur</p>
-          <p class="body">Corps du message</p>
+          <p class="author">Sebastien</p>
+          <p class="body">Tu vois l’esturgeon et la raie se sont lancés dans le reggae.</p>
         </li>
         <li class="message">
-          <p class="author">Auteur</p>
-          <p class="body">Sapiente et illum omnis. Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+          <p class="author">Evinrude</p>
+          <p class="body">Bzz.Bzz.Bzz!</p>
         </li>
         <li class="message is-me">
-          <p class="author">Auteur</p>
-          <p class="body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et illum omnis</p>
+          <p class="author">Jiminy</p>
+          <p class="body">Que penserais-tu d'une chansonnette ?</p>
         </li>
       </ul>
     </div>
@@ -215,8 +216,7 @@ La structure du chat
   var chatInput = document.querySelector("#chat-input")
 
   chatInput.addEventListener("keypress", function(e) {
-    var key = e.keyCode
-    if (key === 13) {
+    if (e.keyCode === 13) {
       console.log({ author: author, body: chatInput.value })
       chatInput.value = ''
     }

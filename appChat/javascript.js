@@ -1,101 +1,65 @@
+// # AppChat
+// Setup author name then start the app
+
+// Require https://plou.io/workshops/appChat/AppChat.js
+
+
+// ## Handle author name
+
+// Get the author name from local storage
 var author = localStorage.getItem('author')
 
-var messageList = []
-
-var chatView = document.querySelector("#chat-view")
-var chatInput = document.querySelector("#chat-input")
+// Get the author input
 var authorInput = document.querySelector("#author-input")
+// Hide the input if the author is already set
 if (author) authorInput.classList.add('has-author')
 
-
-chatView.classList.add('is-loading')
-getMessages()
-setInterval(getMessages, 200)
-
-function getMessages() {
-  fetch('https://api.mlab.com/api/1/databases/appchat/collections/messages?apiKey=bZq6JeaRlSjpukPqJUIS4kd5kGndIqzE')
-    .then((data) => data.json())
-    .then((messages) => {
-      if (messages) {
-        messageList = messages
-        messageList.map(function(message) {
-          if(!document.querySelector(`[data-oid="${message._id.$oid}"]`)) addMessage(message)
-        })
-      }
-      checkAuthor()
-      chatView.classList.remove('is-loading')
-    })
-}
-
-
+// Listen to all keypress events on the author input
 authorInput.addEventListener("keypress", function(e) {
-  var key = e.keyCode
-  if (key === 13) {
-    author = authorInput.value
+  // If the key pressed is `Enter` (https://keycode.info/)
+  if (e.keyCode === 13) {
+    // Save the author name to the local storage
+    localStorage.setItem('author', authorInput.value)
+
+    // Tell AppChat the author name changed
+    appChat.setAuthor()
+    // Check all message's authors
+    appChat.checkAuthor()
+
+    // Hide the input
     authorInput.classList.add('has-author')
-    localStorage.setItem('author', author)
-    checkAuthor()
   }
 });
 
 
+// ## Start the app
+
+// Set Author
+// var author = "Clément"
+
+// Get the message list and the chat input from the DOM
+var chatView = document.querySelector("#chat-view")
+var chatInput = document.querySelector("#chat-input")
+
+// Tell the user the app is loading
+chatView.classList.add('is-loading')
+
+// Initilize the app
+var appChat = new AppChat(chatView, author)
+
+// Start appChat then remove the loading indicator
+appChat.start().then(() => {
+  chatView.classList.remove('is-loading')
+})
+
+// Sends a new message when the user press `Enter`
+// Listen to all keypress events on the chat input
 chatInput.addEventListener("keypress", function(e) {
-  var key = e.keyCode
-  if (key === 13) {
-    postMessage({ author: author, body: chatInput.value })
+  // If the key pressed is `Enter` (https://keycode.info/)
+  if (e.keyCode == 13) {
+    // Post the new message
+    appChat.postMessage({ author: author, body: chatInput.value })
+    // Reset the input
     chatInput.value = ''
   }
 });
-
-function postMessage(message) {
-  messageList.push(message)
-
-  fetch("https://api.mlab.com/api/1/databases/appchat/collections/messages?apiKey=bZq6JeaRlSjpukPqJUIS4kd5kGndIqzE", {
-    body: JSON.stringify(message),
-    method: "POST",
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  }).then(getMessages)
-}
-
-function checkAuthor() {
-  var messages = document.querySelectorAll('.message')
-    for (var message of messages) {
-    if (message.dataset.author == author) {
-      message.classList.add('is-me')
-    }
-    else {
-      message.classList.remove('is-me')
-    }
-  }
-}
-
-
-
-// Add a message to chat list
-function addMessage(message) {
-
-  const element = document.createElement("li");
-  element.classList.add("message");
-  element.dataset.oid = message._id.$oid
-  element.dataset.author = message.author
-
-  if (message.author == author) {
-    element.classList.add("is-me")
-  }
-
-  element.innerHTML = `
-    <p class="author">${message.author}</p>
-    <p class="body">${message.body}</p>
-  `
-
-  var shouldScrollBottom = chatView.scrollTop + chatView.offsetHeight >= chatView.scrollHeight
-
-  chatView.appendChild(element)
-
-  if (shouldScrollBottom) {
-    chatView.scrollTop = chatView.scrollHeight;
-  }
-}
