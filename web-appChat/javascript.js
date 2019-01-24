@@ -1,7 +1,7 @@
 // # AppChat
 // Setup author name then start the app
 
-// Require https://plou.io/workshops/appChat/AppChat.js
+// Require https://plou.io/workshops/web-appchat/AppChat.js
 
 
 // ## Handle author name
@@ -22,9 +22,9 @@ authorInput.addEventListener("keypress", function(e) {
     localStorage.setItem('author', authorInput.value)
 
     // Tell AppChat the author name changed
-    appChat.setAuthor()
+    chat.setAuthor()
     // Check all message's authors
-    appChat.checkAuthor()
+    chat.checkAuthor()
 
     // Hide the input
     authorInput.classList.add('has-author')
@@ -45,10 +45,10 @@ var chatInput = document.querySelector("#chat-input")
 chatView.classList.add('is-loading')
 
 // Initilize the app
-var appChat = new AppChat(chatView, author)
+var chat = new AppChat(chatView, author)
 
-// Start appChat then remove the loading indicator
-appChat.start().then(() => {
+// Start chat then remove the loading indicator
+chat.start().then(() => {
   chatView.classList.remove('is-loading')
 })
 
@@ -58,7 +58,7 @@ chatInput.addEventListener("keypress", function(e) {
   // If the key pressed is `Enter` (https://keycode.info/)
   if (e.keyCode == 13) {
     // Post the new message
-    appChat.postMessage({ author: author, body: chatInput.value })
+    chat.postMessage({ author: author, body: chatInput.value })
     // Reset the input
     chatInput.value = ''
   }
