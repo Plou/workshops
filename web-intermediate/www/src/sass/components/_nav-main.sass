@@ -1,0 +1,17 @@
+/**
+ * nav-main
+ */
+
+.nav-main__list
+  @media screen and #{$media-small}
+    display: flex
+    justify-content: space-around
+
+.nav-main__link
+  display: block
+  padding: 10px
+  color: $white
+
+  &:hover
+    text-decoration: none
+    color: $color-main

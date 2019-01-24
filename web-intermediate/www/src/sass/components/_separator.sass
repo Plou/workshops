@@ -1,0 +1,63 @@
+/**
+ * separator
+ */
+
+.separator
+  position: relative
+  display: block
+  margin: 100px auto
+  width: 200px
+  height: 200px
+  background-color: transparent
+
+.separator:hover
+  animation: 3s 0s bg infinite ease-in
+
+  &::after
+    animation: 300ms 0s rotate infinite linear
+  &::before
+    animation: 300ms 0s rotate-inverse infinite linear
+
+.separator::after,
+.separator::before
+  position: absolute
+  display: block
+  width: 200px
+  height: 2px
+  border: none
+  background-color: white
+  top: 50%
+
+.separator::after,
+  content: ""
+  transform: rotate(20deg)
+
+.separator::before
+  content: ""
+  transform: rotate(-20deg)
+
+
+@keyframes bg
+  0%
+    background-color: green
+
+  50%
+    background-color: blue
+
+  100%
+    background-color: orange
+
+
+
+
+@keyframes rotate
+  0%
+    transform: rotate(20deg)
+  100%
+    transform: rotate(200deg)
+
+@keyframes rotate-inverse
+  0%
+    transform: rotate(-20deg)
+  100%
+    transform: rotate(160deg)

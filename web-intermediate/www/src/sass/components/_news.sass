@@ -1,0 +1,78 @@
+/**
+ * news
+ */
+
+.news__link
+  &:hover
+    color: $color-main
+
+    .news__thumbnail
+      filter: grayscale(60%)
+      transition-delay: 0ms
+      &::after
+        transition-delay: 200ms
+        opacity: 1
+
+.news__thumbnail
+  margin-bottom: 10px
+  filter: grayscale(0)
+  transition: 200ms 200ms filter ease-in-out
+
+  &::after
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: $color-main
+    mix-blend-mode: color
+    opacity: 0
+    transition: 200ms opacity ease-in-out
+
+.news__image
+  display: block
+  width: 100%
+
+.news__date
+  margin: 0
+  font-size: 1.8em
+  color: $color-main-light
+
+.news__title
+  margin: 0 0 15px
+  font-family: $ff-headings
+  font-weight: $fw-semibold
+  font-size: 2.4em
+  line-height: 1.4
+
+.news__text
+  margin: 0
+  font-size: 2em
+  line-height: 1.4
+
+
+@media screen and #{$media-medium}
+  .news--main,
+  .news--large
+    padding-bottom: 35px
+    border-bottom: 1px solid $grey
+
+    .news__link
+      display: flex
+      align-items: flex-start
+
+    .news__thumbnail
+      margin-bottom: 0
+      margin-right: 40px
+      min-width: 360px
+
+    .news__title
+      font-size: 34px
+
+    .news__text
+      font-size: 2.4em
+
+  .news--large
+    .news__thumbnail
+      min-width: 50%
