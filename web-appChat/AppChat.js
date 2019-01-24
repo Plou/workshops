@@ -69,7 +69,7 @@ AppChat.prototype.addMessage = function (message) {
   }
 
   // Create the element
-  const element = document.createElement("li");
+  const element = document.createElement("div");
   element.classList.add("message");
   element.dataset.oid = message._id.$oid
   element.dataset.author = message.author
