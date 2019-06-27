@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Configurator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h3>Layers</h3>
+    <ul id="layers"></ul>
+    <h3>Active layers</h3>
+    <ul id="activeLayers"></ul>
+  </div>
+
+
+  <!--
+    Functions
+  -->
+  <script src="./configurator.vanilla.js"></script>
+
+
+  <!--
+  <script src="./configurator.prototype.js"></script>
+  <script>
+    // Prototypes
+    const layers = {1: {id: 1},3: {id: 3}, 2: {id: 2}}
+    const activeLayersId = [3, 1]
+    configurator = new Configurator(layers, activeLayersId)
+    configurator.render()
+  </script>
+-->
+
+<!--
+  <script src="./configurator.class.js"></script>
+  <script>
+    // Classes
+    const layers = {1: {id: 1},3: {id: 3}, 2: {id: 2}}
+    const activeLayersId = [3, 1]
+    configurator = new Configurator(layers, activeLayersId)
+    configurator.render()
+  </script>
+  -->
+
+</body>
+</html>

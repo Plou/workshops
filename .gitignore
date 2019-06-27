@@ -1,3 +1,7 @@
+node_moodules
+.cache
+dist
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

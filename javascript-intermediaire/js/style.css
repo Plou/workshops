@@ -1,0 +1,27 @@
+body {
+  font-family: 'Inter', Futura, Helvetica;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  font-weight: 200;
+  font-size: 160%;
+  color: #2c3e50;
+}
+h3 {
+  font-weight: 400;
+  margin: 40px 0 0;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+  padding: 5px 30px;
+  margin: 0 10px;
+  background-color: #42b983;
+  color: white;
+}
+a {
+  color: #42b983;
+}
