@@ -70,25 +70,12 @@ body {
   background-color: #fff;
 }
 
-@media (max-width: 720px) {
-  body{ background-color: pink; }
-
-  .list {
-    display: block;
-  }
-}
-
 .item {
   background: white;
   text-align: center;
 }
 .item img {
   mix-blend-mode: exclusion;
-  transition: 500ms transform ;
-  transform: none;
-}
-.item img:hover {
-  transform: translateY(-20px) rotate(45deg) scale(1.2);
 }
 
 .item h2 {
@@ -179,19 +166,18 @@ a:hover {
 }
 
 
-.picto {
-  display: block;
-  margin: 0 auto;
-}
 
 
 .picto {
-  background: hsl(0, 90%, 75%);
   border-radius: 20px;
   padding: 5px;
   transition: 1s all;
 }
 
+/*
+.picto {
+  background: hsl(0, 90%, 75%);
+}
 
 .picto:hover {
   animation: disco 2s infinite;
@@ -217,5 +203,4 @@ a:hover {
   100% {
     background: hsl(360, 70%, 60%);
   }
-
-}
+} */
