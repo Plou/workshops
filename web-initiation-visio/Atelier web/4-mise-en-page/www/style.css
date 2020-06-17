@@ -1,0 +1,42 @@
+/* Permet de d'adapter automatiquement la taille des images à l'écran */
+img { 
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: 20px;
+
+  font-family: sans-serif;
+  color: #2a2b2a;
+  font-size: 1.2em;
+}
+
+.grille,
+.colonnes {
+  border: 3px solid #2a2b2a;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.cellule,
+.bloc {
+  background-color: #2a2b2a;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+/* Flexbox */
+.colonnes {
+}
+
+
+/* grid */
+.grille {
+}
+
+.cellule--mise-en-avant {
+}
