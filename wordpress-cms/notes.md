@@ -19,3 +19,8 @@ Fabriqué pour installer et administrer rapidement des plateformes de blogs, sa 
 
 Le but d’un CMS est donc d’apporter un outils efficace et simple au client.
 Pour nous c’est accélérer le développement d’un site. Nous n’aborderons probablement pas ce sujet, mais le but est de partir d’un site pré-configuré que l’on dupliquera pour chaque nouveau projet, afin de ne pas se taper l’installation, et la création de l’environnement à chaque étape.
+
+
+## Fonctionnement d'internet
+
+Navigateur > DNS > IP > SERVEUR > (PHP + MYSQL) > HTML 
