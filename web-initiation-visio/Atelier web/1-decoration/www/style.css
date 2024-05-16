@@ -5,19 +5,3 @@ body {
   color: #2a2b2a;
   font-size: 1.2em;
 }
-
-.entete {
-  /* Marges et couleur de fond */
-}
-
-.entete h1,
-.entete p {
-  /* couleur de police */
-}
-
-.entete h1 {
-  /* taille de police et marges */
-}
-.entete p {
-  /* taille de police et marges */
-}
