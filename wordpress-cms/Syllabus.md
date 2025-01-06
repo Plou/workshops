@@ -1,7 +1,7 @@
 # Syllabus
 
 ## Descriptif du cours
-Création et administra&on d'un site web. Nous aborderons l'installation et l'administra&on d'un site web avec wordpress. L'atelier nécessite un ordinateur et un accès administrateur à celui-ci.
+Création et administration d'un site web. Nous aborderons l'installation et l'administration d'un site web avec wordpress. L'atelier nécessite un ordinateur et un accès administrateur à celui-ci.
 
 ## Objectifs du cours
 Tous en se familiarisant avec l'interface de wordpress, nous verrons comment créer un site web viable, rapidement et à bas coût. Nous aborderons aussi les limites de cette méthode et les alternatives.
