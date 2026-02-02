@@ -12,7 +12,7 @@ Un *zoning*, *wireframe* ou *prototype* sont de très bons outils de conception,
 C'est avant tout une manière efficace qui permet d'experimenter et de tester des idées rapidement et à moindre coût.
 Il existe une multitude de prototypes, que ce soit griffonés sur du papier, un tableau ou bien créé avec un outil spécialisé. L'important et de choisir un support qui permette de faciliter le test et les discutions sur un objet concret.
 
-Les étapes nécéssaires à la création d'un prototype fonctionnel :
+Les étapes nécessaires à la création d'un prototype fonctionnel :
 
 - Définition du produit.
 - Création de la maquette fonctionnelle (*zoning* ou *wireframe*).
